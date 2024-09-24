@@ -1,7 +1,13 @@
-async function get(url: string) {
-    const response = await fetch(url)
-    const data = await response.json()
-    return data
+async function get(url: string): Promise<[]> {
+    try {
+        const result = await fetch(url)
+        if (!result.ok) throw new Error(`Erro de requisição: ${result.status}`)
+        const data = await result.json()
+        return data
+    } catch (error) {
+        console.error('Erro ao buscar clientes:', error)
+        return []
+    }
 }
 
 export default get
