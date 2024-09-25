@@ -5,6 +5,7 @@ import post from "../functions/post"
 import update from "../functions/update"
 import del from "../functions/delete"
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 function Home() {
     const [clientes, setClientes] = useState<Cliente[]>([])
@@ -33,6 +34,8 @@ function Home() {
     return (
         <main>
             <Header />
+            <main></main>
+            <Footer />
         </main>
     )
 }
