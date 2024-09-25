@@ -5,7 +5,7 @@ async function get(url: string): Promise<[]> {
         const data = await result.json()
         return data
     } catch (error) {
-        console.error('Erro ao buscar clientes:', error)
+        console.error('Erro ao buscar dados:', error)
         return []
     }
 }
