@@ -1,7 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
     --roboto-font: 'Roboto', sans-serif;
+    --inter-font: "Inter", system-ui;
+    --red-01: #200304;
+    --red-02: #2D090A;
+    --red-03: #3B0D0F;
+    --red-04: #4C191B;
+    --red-05: #702B2E;
+    --red-06: #854144;
+    --red-07: #B0595C;
+    --red-08: #D0787C;
+    --red-09: #E29D9F;
+    --red-10: #FAC8CA;
+    --purple-01: #240337;
+    --purple-02: #33064E;
+    --purple-03: #4D126F;
+    --purple-04: #6A2593;
+    --purple-05: #8644AD;
+    --purple-06: #A965D1;
+    --purple-07: #C589E8;
+    --purple-08: #DCA8FA;
+    --purple-09: #EAC7FF;
+    --purple-10: #F4E2FF;
+    --gray-01: #0E0E0E;
+    --gray-02: #1A1A1A;
+    --gray-03: #2E2E2E;
+    --gray-04: #404040;
+    --gray-05: #595959;
+    --gray-06: #717171;
+    --gray-07: #9C9C9C;
+    --gray-08: #B2B2B2;
+    --gray-09: #CCCCCC;
+    --gray-10: #DEDEDE;
+    --gray-11: #EDEDED;
+    --gray-12: #F7F7F7;
 }
 
 * {
@@ -12,6 +46,7 @@
 }
 
 main {
+    background-color: var(--gray-12);
     min-height: 100vh;
     max-height: auto;
 }

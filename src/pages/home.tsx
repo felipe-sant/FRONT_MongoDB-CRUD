@@ -4,6 +4,7 @@ import Cliente from "../models/Cliente"
 import post from "../functions/post"
 import update from "../functions/update"
 import del from "../functions/delete"
+import Header from "../components/Header"
 
 function Home() {
     const [clientes, setClientes] = useState<Cliente[]>([])
@@ -31,18 +32,7 @@ function Home() {
 
     return (
         <main>
-            <h1>Hello world</h1>
-            <button onClick={inserirCliente}>inserir</button>
-            <button onClick={buscarClientes}>buscar</button>
-            <button onClick={atualizarCliente}>Atualizar</button>
-            <button onClick={deletarCliente}>Deletar</button>
-            {clientes.map((cliente, key) => {
-                return (
-                    <li key={key}>
-                        {cliente._id} - {cliente.nome} - {cliente.email}
-                    </li>
-                )
-            })}
+            <Header />
         </main>
     )
 }
