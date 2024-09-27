@@ -2,6 +2,8 @@ import { useState } from "react"
 import Cliente from "../models/Cliente"
 import css from "../styles/home.module.css"
 import cancel from "../images/cancel.svg"
+import warning from "../images/warning.svg"
+import person_search from "../images/person_search.svg"
 import HeaderComponent from "../components/HeaderComponent"
 import FooterComponent from "../components/FooterComponent"
 import ClienteComponent from "../components/ClienteComponent"
@@ -11,7 +13,10 @@ function Home() {
     const cliente2 = new Cliente("dasdkgj2j232ksadfa", "João Augusto Nogueira", "joaozinho@gmail.com")
     const cliente3 = new Cliente("ddsa123dsacvasdfd", "Luiz Felipe dos Santos", "luizfelipedossantos2004@hotmail.com")
 
-    const [clientes, setClientes] = useState<Cliente[]>([cliente1, cliente2, cliente3])
+    const [clientes, setClientes] = useState<Cliente[]>([])
+
+    const [errorImage, setErrorImage] = useState(person_search)
+    const [errorText, setErrorText] = useState("Não há nenhum cliente encontrado.")
 
     // async function buscarClientes() {
     //     const data: { _id: string, nome: string, email: string }[] = await get("http://localhost:4444/clientes")
@@ -51,12 +56,18 @@ function Home() {
                     </section>
                     <section className={css.listaClientes}>
                         {
-                            clientes.map((cli, key) => (
-                                <>
-                                    <ClienteComponent key={key} cliente={cli} />
-                                    <hr />
-                                </>
-                            )) 
+                            !clientes.length ?
+                                <div className={css.semCliente}>
+                                    <img src={errorImage} alt="" />
+                                    <h2>{errorText}</h2>
+                                </div>
+                                :
+                                clientes.map((cli, key) => (
+                                    <>
+                                        <ClienteComponent key={key} cliente={cli} />
+                                        <hr />
+                                    </>
+                                ))
                         }
                     </section>
                 </div>
