@@ -52,6 +52,11 @@
     color: var(--gray-04);
 }
 
+.formulario .input label.required::after {
+    content: "*";
+    color: var(--red-08);
+}
+
 .formulario .input input {
     background-color: var(--gray-12);
     height: 40px;
@@ -62,6 +67,11 @@
     border: none;
     border-bottom: 2px solid var(--gray-08);
     border-radius: 5px;
+}
+
+.formulario .input input.error {
+    border: 1px solid var(--red-08);
+    border-bottom: 2px solid var(--red-08);
 }
 
 .rodape {
