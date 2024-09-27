@@ -7,14 +7,23 @@
 }
 
 .titulo {
-    border-left: 2px solid var(--purple-07);
-    padding-left: 10px;
     width: 400px;
     margin: 0 auto;
     margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo button {
+    border: none;
+    background-color: transparent;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
 }
 
 .titulo h2 {
+    padding-left: 10px;
     font-size: 22px;
     font-weight: bold;
     font-family: var(--inter-font);
@@ -71,6 +80,9 @@
     border-radius: 5px;
     padding: 8px 16px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 600px) {

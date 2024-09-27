@@ -1,6 +1,7 @@
 import FooterComponent from "../components/FooterComponent"
 import HeaderComponent from "../components/HeaderComponent"
 import css from "../styles/cadastroCliente.module.css"
+import back_arrow from "../images/back_arrow.svg"
 
 function CadastroCliente() {
     return (
@@ -9,6 +10,9 @@ function CadastroCliente() {
             <main>
                 <article className={css.conteudo}>
                     <div className={css.titulo}>
+                        <button onClick={() => window.location.href = "/"}>
+                            <img src={back_arrow} alt="Voltar" />
+                        </button>
                         <h2>Criando novo cliente</h2>
                     </div>
                     <div className={css.formulario}>
