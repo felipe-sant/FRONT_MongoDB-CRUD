@@ -18,11 +18,17 @@ function CadastroCliente() {
                     <div className={css.formulario}>
                         <div className={css.input}>
                             <label htmlFor="nome">Nome:</label>
-                            <input type="text" />
+                            <input 
+                                type="text" 
+                                placeholder="Adicione o cliente"
+                            />
                         </div>
                         <div className={css.input}>
                             <label htmlFor="email">Email:</label>
-                            <input type="email" />
+                            <input 
+                                type="email" 
+                                placeholder="Adicione o email"
+                            />
                         </div>
                     </div>
                     <div className={css.rodape}>

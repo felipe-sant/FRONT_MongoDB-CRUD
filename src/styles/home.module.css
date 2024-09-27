@@ -10,7 +10,7 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     margin-bottom: 80px;
 }
 
@@ -26,8 +26,8 @@
     height: 40px;
     padding: 0px 38px 0px 10px;
     font-family: var(--inter-font);
-    font-weight: normal;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 15px;
 }
 
 .filtro .input button {
@@ -85,7 +85,7 @@
 .semCliente h2 {
     font-family: var(--inter-font);
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--gray-09);
 }
 
