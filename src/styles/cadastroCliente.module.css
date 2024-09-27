@@ -1,0 +1,88 @@
+.conteudo {
+    max-width: calc(900px - 30%);
+    min-width: none;
+    margin: auto;
+    padding: 80px 20px 100px 20px;
+    height: calc(100vh - 100px);
+}
+
+.titulo {
+    border-left: 2px solid var(--purple-07);
+    padding-left: 10px;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.titulo h2 {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: var(--inter-font);
+    color: var(--purple-01);
+}
+
+.formulario {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.formulario .input {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.formulario .input label {
+    font-family: var(--inter-font);
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--gray-04);
+}
+
+.formulario .input input {
+    background-color: var(--gray-12);
+    height: 40px;
+    font-family: var(--inter-font);
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 2px solid var(--gray-08);
+    border-radius: 5px;
+}
+
+.rodape {
+    margin: auto;
+    display: flex;
+    justify-content: end;
+    width: 400px;
+}
+
+.rodape button {
+    background: linear-gradient(to top, var(--purple-06), var(--purple-07));
+    border: none;
+    font-family: var(--inter-font);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .titulo {
+        width: 320px;
+    }
+
+    .formulario .input {
+        width: 320px;
+    }
+
+    .rodape {
+        width: 320px;
+    }
+}
