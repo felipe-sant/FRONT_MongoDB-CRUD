@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 80px;
 }
 
 .filtro .input {
@@ -41,6 +42,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .filtro a {
@@ -56,8 +58,26 @@
     color: var(--purple-01);
 }
 
+.listaClientes {
+    min-height: 400px;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.listaClientes hr {
+    height: 1px;
+    color: var(--gray-08);
+    margin: 30px 0px;
+}
+
 @media (max-width: 600px) {
     .filtro {
-        width: 320px;
+        width: 340px;
+    }
+
+    .listaClientes {
+        width: 340px;
     }
 }

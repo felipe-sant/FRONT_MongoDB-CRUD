@@ -1,7 +1,7 @@
 import logo from "../images/gato.svg"
 import css from "../styles/header.module.css"
 
-function Header() {
+function HeaderComponent() {
     return (
         <header className={css.header}>
             <div className="img">
@@ -12,4 +12,4 @@ function Header() {
     )
 }
 
-export default Header
+export default HeaderComponent

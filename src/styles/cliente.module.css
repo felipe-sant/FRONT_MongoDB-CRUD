@@ -1,0 +1,40 @@
+.conteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info h2 {
+    font-size: 17px;
+    font-family: var(--inter-font);
+    font-weight: bold;
+}
+
+.info p {
+    font-size: 15px;
+    font-family: var(--inter-font);
+    font-weight: normal;
+}
+
+.botao {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.botao button {
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

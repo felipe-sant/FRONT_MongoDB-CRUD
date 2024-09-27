@@ -1,6 +1,6 @@
 import css from "../styles/footer.module.css"
 
-function Footer() {
+function FooterComponent() {
     return (
         <footer className={css.footer}>
             <p>Feito por:<a href="https://github.com/felipe-sant">felipe-sant</a></p>
@@ -8,4 +8,4 @@ function Footer() {
     )
 }
 
-export default Footer
+export default FooterComponent

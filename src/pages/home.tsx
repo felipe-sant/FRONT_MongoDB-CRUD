@@ -1,17 +1,14 @@
 import { useState } from "react"
-import get from "../functions/get"
 import Cliente from "../models/Cliente"
-import post from "../functions/post"
-import update from "../functions/update"
-import del from "../functions/delete"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
 import css from "../styles/home.module.css"
 import cancel from "../images/cancel.svg"
+import HeaderComponent from "../components/HeaderComponent"
+import FooterComponent from "../components/FooterComponent"
+import ClienteComponent from "../components/ClienteComponent"
 
 function Home() {
-    const cliente1 = new Cliente("dasd123123dsadfa", "Pedro Augusto Nogueira Silva", "pedro@gmail.com")
-    const cliente2 = new Cliente("dasdkgj2j232ksadfa", "João Augusto Nogueira Silva", "joaozinho@gmail.com")
+    const cliente1 = new Cliente("dasd123123dsadfa", "Pedro Augusto Nogueira", "pedro@gmail.com")
+    const cliente2 = new Cliente("dasdkgj2j232ksadfa", "João Augusto Nogueira", "joaozinho@gmail.com")
     const cliente3 = new Cliente("ddsa123dsacvasdfd", "Luiz Felipe dos Santos", "luizfelipedossantos2004@hotmail.com")
 
     const [clientes, setClientes] = useState<Cliente[]>([cliente1, cliente2, cliente3])
@@ -37,10 +34,10 @@ function Home() {
 
     return (
         <>
-            <Header />
+            <HeaderComponent />
             <main>
-                <article className={css.conteudo}>
-                    <div className={css.filtro}>
+                <div className={css.conteudo}>
+                    <section className={css.filtro}>
                         <div className={css.input}>
                             <input
                                 type="text"
@@ -51,13 +48,20 @@ function Home() {
                             </button>
                         </div>
                         <a href="/clientes">Cadastrar novos clientes</a>
-                    </div>
-                    <div className="listaClientes">
-
-                    </div>
-                </article>
+                    </section>
+                    <section className={css.listaClientes}>
+                        {
+                            clientes.map((cli, key) => (
+                                <>
+                                    <ClienteComponent key={key} cliente={cli} />
+                                    <hr />
+                                </>
+                            )) 
+                        }
+                    </section>
+                </div>
             </main>
-            <Footer />
+            <FooterComponent />
         </>
     )
 }
