@@ -1,3 +1,5 @@
+import ClienteType from "../types/clienteType"
+
 class Cliente {
     public _id: string
     public nome: string
@@ -7,7 +9,7 @@ class Cliente {
         this.nome = nome
         this.email = email
     }
-    public toJson() { return { nome: this.nome, email: this.email } }
+    public toJson(): ClienteType { return { nome: this.nome, email: this.email } }
 }
 
 export default Cliente
