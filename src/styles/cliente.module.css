@@ -11,13 +11,13 @@
 }
 
 .info h2 {
-    font-size: 17px;
+    font-size: 16px;
     font-family: var(--inter-font);
     font-weight: bold;
 }
 
 .info p {
-    font-size: 15px;
+    font-size: 13px;
     font-family: var(--inter-font);
     font-weight: normal;
 }
