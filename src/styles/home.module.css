@@ -1,0 +1,44 @@
+.conteudo {
+    max-width: calc(1200px - 30%);
+    min-width: none;
+    margin: auto;
+    padding: 80px 20px 100px 20px;
+}
+
+.filtro {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filtro input {
+    background-color: var(--gray-12);
+    border: 1px solid var(--gray-08);
+    border-radius: 5px;
+    height: 40px;
+    padding: 0px 10px;
+    font-family: var(--inter-font);
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.filtro a {
+    text-align: right;
+    font-family: var(--inter-font);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--purple-04);
+    transition: color 0.2s;
+}
+
+.filtro a:hover {
+    color: var(--purple-01);
+}
+
+@media (max-width: 600px) {
+    .filtro {
+        width: 320px;
+    }
+}

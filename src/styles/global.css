@@ -46,7 +46,7 @@
 }
 
 main {
-    background-color: var(--gray-12);
+    background-color: var(--gray-11);
     min-height: calc(100vh - 100px);
     max-height: auto;
 }
