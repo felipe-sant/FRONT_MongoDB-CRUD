@@ -13,7 +13,7 @@ function Home() {
     const [clientesDoServidor, setClientesDoServidor] = useState<Cliente[]>([])
     const [clientes, setClientes] = useState<Cliente[]>([])
     const [errorImage, setErrorImage] = useState(person_search)
-    const [errorText, setErrorText] = useState("Não há nenhum cliente encontrado.")
+    const [errorText, setErrorText] = useState("Nenhum cliente encontrado.")
 
     async function buscarClientesDoServidor() {
         const clientes = await buscarClientes()
