@@ -13,15 +13,34 @@
     gap: 10px;
 }
 
-.filtro input {
+.filtro .input {
+    position: relative;
+}
+
+.filtro .input input {
     background-color: var(--gray-12);
     border: 1px solid var(--gray-08);
     border-radius: 5px;
+    width: 100%;
     height: 40px;
-    padding: 0px 10px;
+    padding: 0px 38px 0px 10px;
     font-family: var(--inter-font);
     font-weight: normal;
     font-size: 16px;
+}
+
+.filtro .input button {
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .filtro a {

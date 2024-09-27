@@ -7,6 +7,7 @@ import del from "../functions/delete"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import css from "../styles/home.module.css"
+import cancel from "../images/cancel.svg"
 
 function Home() {
     const cliente1 = new Cliente("dasd123123dsadfa", "Pedro Augusto Nogueira Silva", "pedro@gmail.com")
@@ -40,10 +41,15 @@ function Home() {
             <main>
                 <article className={css.conteudo}>
                     <div className={css.filtro}>
-                        <input
-                            type="text"
-                            placeholder="Buscar clientes"
-                        />
+                        <div className={css.input}>
+                            <input
+                                type="text"
+                                placeholder="Buscar clientes"
+                            />
+                            <button onClick={() => alert("oi")}>
+                                <img src={cancel} alt="cancel" />
+                            </button>
+                        </div>
                         <a href="/clientes">Cadastrar novos clientes</a>
                     </div>
                     <div className="listaClientes">
