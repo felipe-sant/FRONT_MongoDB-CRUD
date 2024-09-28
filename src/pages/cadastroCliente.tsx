@@ -21,13 +21,13 @@ function CadastroCliente() {
     }
 
     function verificarErros() {
-        nome == "" ? setErrorNome(true) : setErrorNome(false)
-        email == "" ? setErrorEmail(true) : setErrorEmail(false)
+        nome === "" ? setErrorNome(true) : setErrorNome(false)
+        email === "" ? setErrorEmail(true) : setErrorEmail(false)
     }
 
     function cadastrar() {
         verificarErros()
-        if (nome == "" || email == "") return
+        if (nome === "" || email === "") return
         const cliente = new Cliente("", nome, email)
         inserirCliente(cliente)
         window.location.href = "/"
