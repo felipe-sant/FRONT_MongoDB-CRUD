@@ -8,6 +8,10 @@
     height: 60px;
 }
 
+.header div {
+    cursor: pointer;
+}
+
 .header h1 {
     color: var(--purple-10);
     font-size: 18px;
