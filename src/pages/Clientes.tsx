@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import Cliente from "../models/Cliente"
-import css from "../styles/home.module.css"
+import css from "../styles/clientePage.module.css"
 import cancel from "../images/cancel.svg"
 import person_search from "../images/person_search.svg"
 import HeaderComponent from "../components/HeaderComponent"

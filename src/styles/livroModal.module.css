@@ -1,0 +1,98 @@
+.titulo {
+    padding-top: 30px;
+}
+
+.titulo .id {
+    display: flex;
+    justify-content: end;
+    padding: 0px 20px;
+}
+
+.titulo .id span {
+    font-weight: 500;
+    font-family: var(--inter-font);
+    font-size: 10px;
+    color: var(--gray-07);
+}
+
+.titulo .nomeTitulo {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 30px;
+}
+
+.titulo .nomeTitulo .nome {
+    font-weight: bold;
+    font-size: 16px;
+    font-family: var(--inter-font);
+    color: var(--gray-01);
+}
+
+.titulo .nomeTitulo hr {
+    width: 60px;
+    border: 1px solid var(--gray-07);
+}
+
+.info {
+    height: 320px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info .input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info .input label {
+    font-family: var(--inter-font);
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--gray-04);
+    padding-left: 10px;
+}
+
+.info .input input {
+    background-color: var(--gray-12);
+    height: 30px;
+    font-family: var(--inter-font);
+    font-weight: 500;
+    font-size: 12px;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 2px solid var(--gray-08);
+    border-radius: 5px;
+}
+
+.info p {
+    text-align: right;
+    font-weight: 600;
+    font-size: 10px;
+    font-family: var(--inter-font);
+    color: var(--gray-07);
+}
+
+.rodape {
+    position: absolute;
+    bottom: 40px;
+    padding: 0px 30px;
+}
+
+.rodape button {
+    background: linear-gradient(to top, var(--purple-06), var(--purple-07));
+    border: none;
+    font-family: var(--inter-font);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
