@@ -49,7 +49,7 @@ function Page_ClienteCadastro() {
                             <label htmlFor="nome" className={css.required}>Nome</label>
                             <input 
                                 type="text" 
-                                placeholder="Adicione o cliente"
+                                placeholder="Adicione o nome"
                                 value={nome}
                                 onChange={handleNome}
                                 className={errorNome ? css.error : ""}
