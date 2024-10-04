@@ -4,6 +4,7 @@ import modal from "../styles/modal.module.css";
 import css from "../styles/livroModal.module.css"
 import { useState } from "react";
 import Livro from "../models/Livro"
+import atualizarLivro from '../functions/atualizarLivro';
 
 function LivroModalComponent(props: LivroModalType) {
     const livro = props.livro;
@@ -12,7 +13,7 @@ function LivroModalComponent(props: LivroModalType) {
 
     const [titulo, setTitulo] = useState("");
     const [autor, setAutor] = useState("");
-    const [ano, setAno] = useState("");
+    const [ano, setAno] = useState<number>(livro.ano);
 
     function handleTitulo(event: React.ChangeEvent<HTMLInputElement>) {
         setTitulo(event.target.value);
@@ -24,18 +25,14 @@ function LivroModalComponent(props: LivroModalType) {
 
     function handleAno(event: React.ChangeEvent<HTMLInputElement>) {
         const e: number = parseInt(event.target.value);
-        if (isNaN(e)) {
-            setAno("");
-        } else {
-            setAno(e.toString());
-        }
+        if (!isNaN(e)) setAno(e)
     }
 
     function salvar() {
         const tituloLivro = titulo === "" ? livro.titulo : titulo;
         const autorLivro = autor === "" ? livro.autor : autor;
-        const anoLivro = ano === "" ? livro.ano : ano;
-        // atualizarLivro(new Livro(livro._id, tituloLivro, autorLivro, anoLivro));
+        const anoLivro: number = ano;
+        atualizarLivro(new Livro(livro._id, tituloLivro, autorLivro, anoLivro));
         window.location.reload();
     }
 
@@ -72,7 +69,7 @@ function LivroModalComponent(props: LivroModalType) {
                 <div className={css.input}>
                     <label htmlFor="ano">Ano</label>
                     <input
-                        type="text"
+                        type="number"
                         placeholder={livro.ano.toString()}
                         onChange={handleAno}
                         value={ano}

@@ -4,6 +4,7 @@ import css from "../styles/cadastroLivro.module.css"
 import back_arrow from "../images/back_arrow.svg"
 import { useState } from "react"
 import Livro from "../models/Livro"
+import inserirLivro from "../functions/inserirLivro"
 
 function Page_LivroCadastro() {
     const [titulo, setTitulo] = useState("")
@@ -36,7 +37,7 @@ function Page_LivroCadastro() {
         verificarErros()
         if (titulo === "" || autor === "") return
         const livro = new Livro("", titulo, autor, ano)
-        // inserirLivro(livro)
+        inserirLivro(livro)
         window.location.href = "/livros"
     }
 

@@ -4,6 +4,7 @@ import edit from "../images/edit.svg"
 import del from "../images/delete.svg"
 import Livro from "../models/Livro";
 import LivroModalComponent from "./LivroModalComponent";
+import deletarLivro from "../functions/deletarLivro";
 
 function LivroComponent(props: { livro: Livro }) {
     const livro = props.livro
@@ -13,7 +14,7 @@ function LivroComponent(props: { livro: Livro }) {
     const handleShow = () => setShow(true)
 
     function deletar() {
-        // deletarLivro(livro)
+        deletarLivro(livro)
         window.location.reload()
     }
 

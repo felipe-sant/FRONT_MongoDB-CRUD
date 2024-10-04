@@ -6,6 +6,7 @@ import FooterComponent from "../components/FooterComponent"
 import cancel from "../images/cancel.svg"
 import LivroComponent from "../components/LivroComponent"
 import css from "../styles/livroPage.module.css"
+import buscarLivros from "../functions/buscarLivros"
 
 function Page_Livros() {
     const [livros, setLivros] = useState<Livro[]>([])
@@ -13,8 +14,7 @@ function Page_Livros() {
     const [errorText] = useState("Nenhum livro encontrado.")
 
     async function buscarLivrosDoServidor() {
-        // const livros = await buscarLivros()
-        const livros: Livro[] = [new Livro("1", "pedro augustos book", "pedro augusto", 2020)]
+        const livros = await buscarLivros()
         setLivros(livros)
     }
 
@@ -50,8 +50,8 @@ function Page_Livros() {
                                 livros.map((liv, key) => (
                                     <div key={key}>
                                         <LivroComponent livro={liv} />
-                                        <hr/>
-                                    </div> 
+                                        <hr />
+                                    </div>
                                 ))
                         }
                     </section>
