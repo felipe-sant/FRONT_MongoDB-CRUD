@@ -1,0 +1,41 @@
+.main {
+    max-width: 800px;
+    min-width: none;
+    margin: 0 auto;
+    height: calc(100vh - 100px);
+}
+
+.main h1 {
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 2rem;
+    padding-top: 60px;
+}
+
+.main .links {
+    height: 70%;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+
+.main .links button {
+    width: 200px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: var(--red-04);
+    border: none;
+    color: var(--gray-12);
+    font-family: var(--font-family);
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main .links button:hover {
+    background-color: var(--red-03);
+}
