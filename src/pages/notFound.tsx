@@ -1,6 +1,6 @@
 import css from "../styles/notFound.module.css"
 
-export default function Page_NotFound() {
+function PageNotFound() {
     return (
         <main className={css.main}>
             <div>
@@ -10,3 +10,5 @@ export default function Page_NotFound() {
         </main>
     )
 }
+
+export default PageNotFound

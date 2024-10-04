@@ -1,21 +1,21 @@
 import { Route, BrowserRouter, Routes as Switch } from "react-router-dom";
-import Page_LivroCadastro from "../pages/LivroCadastro";
-import Page_Clientes from "../pages/Clientes";
-import Page_ClienteCadastro from "../pages/ClienteCadastro";
-import Page_Livros from "../pages/Livros";
-import Page_NotFound from "../pages/NotFound";
-import Page_Home from "../pages/Home";
+import PageHome from "../pages/Home";
+import PageClientes from "../pages/Clientes";
+import PageClienteCadastro from "../pages/ClienteCadastro";
+import PageLivros from "../pages/Livros";
+import PageLivroCadastro from "../pages/LivroCadastro";
+import PageNotFound from "../pages/NotFound";
 
 export default function Routers() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" element={<Page_Home />} />
-        <Route path="/clientes" element={<Page_Clientes />} />
-        <Route path="/clientes/cadastro" element={<Page_ClienteCadastro />} />
-        <Route path="/livros" element={<Page_Livros />} />
-        <Route path="/livros/cadastro" element={<Page_LivroCadastro />} />
-        <Route path="*" element={<Page_NotFound />} />
+        <Route path="/" element={<PageHome />} />
+        <Route path="/clientes" element={<PageClientes />} />
+        <Route path="/clientes/cadastro" element={<PageClienteCadastro />} />
+        <Route path="/livros" element={<PageLivros />} />
+        <Route path="/livros/cadastro" element={<PageLivroCadastro />} />
+        <Route path="*" element={<PageNotFound />} />
       </Switch>
     </BrowserRouter>  
   );

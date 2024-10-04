@@ -6,7 +6,7 @@ import { useState } from "react"
 import Cliente from "../models/Cliente"
 import inserirCliente from "../functions/inserirCliente"
 
-function Page_ClienteCadastro() {
+function PageClienteCadastro() {
     const [nome, setNome] = useState("")
     const [errorNome, setErrorNome] = useState(false)
     const [email, setEmail] = useState("")
@@ -76,4 +76,4 @@ function Page_ClienteCadastro() {
     )
 }
 
-export default Page_ClienteCadastro
+export default PageClienteCadastro

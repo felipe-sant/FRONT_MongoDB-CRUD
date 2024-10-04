@@ -2,7 +2,7 @@ import FooterComponent from "../components/FooterComponent"
 import HeaderComponent from "../components/HeaderComponent"
 import css from "../styles/home.module.css"
 
-function Page_Home() {
+function PageHome() {
     return (
         <>
             <HeaderComponent />
@@ -20,4 +20,4 @@ function Page_Home() {
     )
 }
 
-export default Page_Home
+export default PageHome

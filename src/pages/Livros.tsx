@@ -8,7 +8,7 @@ import LivroComponent from "../components/LivroComponent"
 import css from "../styles/livroPage.module.css"
 import buscarLivros from "../functions/buscarLivros"
 
-function Page_Livros() {
+function PageLivros() {
     const [livros, setLivros] = useState<Livro[]>([])
     const [errorImage] = useState(person_search)
     const [errorText] = useState("Nenhum livro encontrado.")
@@ -62,4 +62,4 @@ function Page_Livros() {
     )
 }
 
-export default Page_Livros
+export default PageLivros

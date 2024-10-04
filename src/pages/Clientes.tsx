@@ -8,7 +8,7 @@ import FooterComponent from "../components/FooterComponent"
 import ClienteComponent from "../components/ClienteComponent"
 import buscarClientes from "../functions/buscarClientes"
 
-function Page_Clientes() {
+function PageClientes() {
     const [clientes, setClientes] = useState<Cliente[]>([])
     const [errorImage] = useState(person_search)
     const [errorText] = useState("Nenhum cliente encontrado.")
@@ -62,4 +62,4 @@ function Page_Clientes() {
     )
 }
 
-export default Page_Clientes
+export default PageClientes

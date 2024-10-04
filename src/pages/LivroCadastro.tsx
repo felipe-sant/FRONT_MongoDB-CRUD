@@ -6,7 +6,7 @@ import { useState } from "react"
 import Livro from "../models/Livro"
 import inserirLivro from "../functions/inserirLivro"
 
-function Page_LivroCadastro() {
+function PageLivroCadastro() {
     const [titulo, setTitulo] = useState("")
     const [errorTitulo, setErrorTitulo] = useState(false)
     const [autor, setAutor] = useState("")
@@ -93,4 +93,4 @@ function Page_LivroCadastro() {
     )
 }
 
-export default Page_LivroCadastro
+export default PageLivroCadastro
