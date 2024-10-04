@@ -1,0 +1,110 @@
+.conteudo {
+    max-width: calc(900px - 30%);
+    min-width: none;
+    margin: auto;
+    padding: 80px 20px 100px 20px;
+    height: calc(100vh - 100px);
+}
+
+.titulo {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo button {
+    border: none;
+    background-color: transparent;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.titulo h2 {
+    padding-left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: var(--inter-font);
+    color: var(--purple-01);
+}
+
+.formulario {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.formulario .input {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.formulario .input label {
+    font-family: var(--inter-font);
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--gray-04);
+}
+
+.formulario .input label.required::after {
+    content: "*";
+    color: var(--red-08);
+}
+
+.formulario .input input {
+    background-color: var(--gray-12);
+    height: 40px;
+    font-family: var(--inter-font);
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 2px solid var(--gray-08);
+    border-radius: 5px;
+}
+
+.formulario .input input.error {
+    border: 1px solid var(--red-08);
+    border-bottom: 2px solid var(--red-08);
+}
+
+.rodape {
+    margin: auto;
+    display: flex;
+    justify-content: end;
+    width: 400px;
+}
+
+.rodape button {
+    background: linear-gradient(to top, var(--purple-06), var(--purple-07));
+    border: none;
+    font-family: var(--inter-font);
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .titulo {
+        width: 320px;
+    }
+
+    .formulario .input {
+        width: 320px;
+    }
+
+    .rodape {
+        width: 320px;
+    }
+}

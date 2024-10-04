@@ -6,7 +6,7 @@ import { useState } from "react"
 import Cliente from "../models/Cliente"
 import inserirCliente from "../functions/inserirCliente"
 
-function CadastroCliente() {
+function Page_ClienteCadastro() {
     const [nome, setNome] = useState("")
     const [errorNome, setErrorNome] = useState(false)
     const [email, setEmail] = useState("")
@@ -30,7 +30,7 @@ function CadastroCliente() {
         if (nome === "" || email === "") return
         const cliente = new Cliente("", nome, email)
         inserirCliente(cliente)
-        window.location.href = "/"
+        window.location.href = "/clientes"
     }
 
     return (
@@ -39,7 +39,7 @@ function CadastroCliente() {
             <main>
                 <article className={css.conteudo}>
                     <div className={css.titulo}>
-                        <button onClick={() => window.location.href = "/"}>
+                        <button onClick={() => window.location.href = "/clientes"}>
                             <img src={back_arrow} alt="Voltar" />
                         </button>
                         <h2>Criando novo cliente</h2>
@@ -49,7 +49,7 @@ function CadastroCliente() {
                             <label htmlFor="nome" className={css.required}>Nome</label>
                             <input 
                                 type="text" 
-                                placeholder="Adicione o cliente"
+                                placeholder="Adicione o nome"
                                 value={nome}
                                 onChange={handleNome}
                                 className={errorNome ? css.error : ""}
@@ -76,4 +76,4 @@ function CadastroCliente() {
     )
 }
 
-export default CadastroCliente
+export default Page_ClienteCadastro
